@@ -3,7 +3,7 @@
 
 # Try to save current branch name to variable
 # Redirect stderr to null to keep output from being clogged
-current_branch=$(git rev-parse --abbrev-ref HEAD 2> null)
+current_branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 
 # If current_branch is empty, the current folder is not in a git repo
 if [ "$current_branch" = "" ]; then
